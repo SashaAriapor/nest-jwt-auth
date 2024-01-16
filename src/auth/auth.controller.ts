@@ -6,7 +6,9 @@ import { AccessTokenGuard } from 'src/common/guards/accessToken.guard';
 import { Request } from 'express';
 import { RefreshTokenGuard } from 'src/common/guards/refreshToken.guard';
 import { RegisterDto } from './dto/register.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags("Auth")
 @Controller('auth')
 export class AuthController {
   constructor(
